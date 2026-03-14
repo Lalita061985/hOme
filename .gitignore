@@ -1,0 +1,27 @@
+# Environment / secrets
+.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Downloads / exports (not tracked)
+downloads/
+
+# macOS
+.DS_Store
+
+# Claude Code local config
+.claude/
+
+# CocoIndex local cache
+.cocoindex_code/
