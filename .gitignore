@@ -25,3 +25,7 @@ downloads/
 
 # CocoIndex local cache
 .cocoindex_code/
+.serena/
+.claude/settings.local*.json
+.codex-agent-*.json
+.mypy_cache/

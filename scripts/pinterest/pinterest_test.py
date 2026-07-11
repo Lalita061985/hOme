@@ -32,6 +32,7 @@ from dotenv import dotenv_values, set_key
 
 SCRIPT_DIR = Path(__file__).parent
 ENV_FILE = SCRIPT_DIR / ".env"
+GLOBAL_ENV_FILE = Path.home() / ".env"
 RESEARCH_DIR = SCRIPT_DIR / "../../research/pinterest"
 
 BASE_URL = "https://api.pinterest.com/v5"
@@ -43,15 +44,28 @@ SCOPES = "boards:read,pins:read"
 # ── Credentials ───────────────────────────────────────────────────────────────
 
 def load_env() -> dict[str, str]:
-    """Load .env, exit with helpful message if missing."""
-    if not ENV_FILE.exists():
-        print(f"No .env file found at {ENV_FILE}")
+    """Load env vars: global ~/.env as base layer, local scripts/pinterest/.env as override.
+    At least one must exist; local .env takes precedence on key conflicts."""
+    global_exists = GLOBAL_ENV_FILE.exists()
+    local_exists = ENV_FILE.exists()
+
+    if not global_exists and not local_exists:
+        print(f"No .env file found at {ENV_FILE} or {GLOBAL_ENV_FILE}")
         print("Run: cp .env.example .env  — then fill in APP_ID and APP_SECRET")
         sys.exit(1)
-    return dotenv_values(ENV_FILE)
+
+    # Load global first (base layer), then local (overrides)
+    env: dict[str, str] = {}
+    if global_exists:
+        env.update(dotenv_values(GLOBAL_ENV_FILE))
+    if local_exists:
+        env.update(dotenv_values(ENV_FILE))
+    return env
 
 
 def save_token(key: str, value: str) -> None:
+    """Always save tokens to the local .env (creating it if needed)."""
+    ENV_FILE.touch(exist_ok=True)
     set_key(str(ENV_FILE), key, value)
 
 
