@@ -1,5 +1,5 @@
 ---
-generated_at: 2026-07-21T06:30:16.380282+00:00
+generated_at: 2026-07-22T06:30:16.994812+00:00
 project_id: 43edf4c9-5b77-4b67-9fa6-2356ba1a508a
 project_name: hOme
 source: dagster-lifeos
@@ -107,15 +107,15 @@ _Sources queried: devices, stack, projects, documents, skills_
 
 ## ⚠ Coherence Sensor
 
-_Latest scan 2026-07-20 (I02 sensor-v0). Passive alert — verify live before acting; never write-gating._
+_Latest scan 2026-07-21 (I02 sensor-v0). Passive alert — verify live before acting; never write-gating._
 
 ### 🚨 1 CRITICAL
 - **rule6_insert_blocked** (_machinery) = 3 — dagster_outputs, roadmap_periods, routing_decisions
 
 ### ⚠ Initiative-coherence warnings
 - **initiative_decision_linkage_gap** = 10 — I29:Housekeeping, I10:energy-scheduling, I33:relationships-social-connection, I34:finances-runway-window, I11:personal-health-selfknowledge +5 more
-- **initiative_issue_linkage_gap** = 16 — I29:Housekeeping, I30:alchemy-the-other-pill, I22:Cross-Project Intelligence Dashboard, I10:energy-scheduling, I28:LifeOS Hardware Capacity Governance +11 more
-- **initiative_orphan_tasks** = 4 — I15:1, I22:1, I29:1, I32:1 (+9 untagged)
+- **initiative_issue_linkage_gap** = 17 — I29:Housekeeping, I30:alchemy-the-other-pill, I22:Cross-Project Intelligence Dashboard, I10:energy-scheduling, I28:LifeOS Hardware Capacity Governance +12 more
+- **initiative_orphan_tasks** = 4 — I15:1, I22:1, I29:1, I32:1 (+20 untagged)
 
 ## 🧹 Nexus Hygiene (weekly scan)
 
