@@ -1,0 +1,12 @@
+{
+  "status": "moved_to_cold_storage",
+  "date": "2026-10-10",
+  "source": "/Users/LPS/Nexus/hOme/_archive",
+  "destination_host": "Mac Mini",
+  "destination": "/Volumes/OWC Envoy Ultra/Nexus_Cold/2026/nexus-project-archives-20261010/hOme/_archive",
+  "master_manifest": "/Volumes/OWC Envoy Ultra/Nexus_Cold/2026/nexus-project-archives-20261010/ARCHIVE_MANIFEST.json",
+  "local_master_manifest": "/Users/LPS/Nexus/Cortex/MAP/INITIATIVES/I29-housekeeping/evidence/raw-manifests/nexus-visible-cleanup-20261010/project-archives-20261010-manifest.json",
+  "regular_files": 6,
+  "verification": "Every regular file SHA256, directory and symlink target matched OWC before local removal; source rechecked; existing recovery manifests retained",
+  "restore": "Retrieve from OWC using the original relative path. Symlinks retain their original targets. Never remove local manifests."
+}
