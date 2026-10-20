@@ -29,3 +29,6 @@ downloads/
 .claude/settings.local*.json
 .codex-agent-*.json
 .mypy_cache/
+# generated, retired (ADR-005, task c9542e65)
+NEXT_SESSION.md
+NEXT_SESSION [0-9]*.md
